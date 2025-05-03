@@ -31,7 +31,7 @@ lib/
 │   └── transaction.dart
 ├── modules/                 # Mỗi tính năng lớn là 1 module
 │   ├── home/
-│   │   ├── home_page.dart
+│   │   ├── home_screen.dart
 │   │   ├── home_controller.dart
 │   │   └── widgets/
 │   └── transactions/
