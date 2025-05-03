@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:finance_manager/app/routes.dart'; // Import quản lý routes (nếu có)
 import 'package:finance_manager/app/theme.dart'; // Import theme (nếu có)
-import 'package:finance_manager/modules/home/home_screen.dart'; // Import màn hình Home
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

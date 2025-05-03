@@ -35,7 +35,7 @@ lib/
 │   │   ├── home_controller.dart
 │   │   └── widgets/
 │   └── transactions/
-│       ├── transaction_page.dart
+│       ├── transaction_screen.dart
 │       └── transaction_controller.dart
 ├── widgets/                 # Widget tái sử dụng chung toàn app
 │   └── custom_button.dart

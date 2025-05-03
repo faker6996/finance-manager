@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:finance_manager/modules/home/home_screen.dart';
-//import 'package:finance_manager/modules/transactions/screens/add_transaction_screen.dart';
-//import 'package:finance_manager/modules/transactions/screens/transaction_detail_screen.dart';
-// Import các màn hình khác của bạn
+import 'package:finance_manager/modules/home/screens/home_screen.dart';
 
 class AppRoutes {
   static const String home = '/';
