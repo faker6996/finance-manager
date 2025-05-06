@@ -4,6 +4,7 @@ import 'package:finance_manager/app/routes.dart';
 
 import '../../../core/constants.dart';
 import '../../../widgets/custom_bottom_menu.dart';
+import '../widgets/gyroscope_display.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Home'),
       ),
       content: const Center(
-        child: Text('Home Content'),
+        child: GyroscopeDisplay(),
       ),
       footer: const CustomBottomMenu(selectedIndex: NavigationConstants.HOME_INDEX, onMenuItemSelected: null), // onMenuItemSelected không cần thiết nữa
       currentRoute: AppRoutes.home,
