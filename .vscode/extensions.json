@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    "dart-code.flutter",
+    "dart-code.dart-code",
+    "nash.awesome-flutter-snippets",
+    "usernamehw.errorlens",
+    "eamodio.gitlens",
+    "wayou.vscode-todo-highlight",
+    "localizely.flutter-intl",
+    "hirantha.json-to-dart",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "pkief.material-icon-theme",
+    "oderwat.indent-rainbow",
+    "streetsidesoftware.code-spell-checker",
+    "ms-vscode.vscode-json",
+    "redhat.vscode-yaml"
+  ],
+  "unwantedRecommendations": [
+    "ms-vscode.vscode-typescript-next",
+    "hookyqr.beautify"
+  ]
+}

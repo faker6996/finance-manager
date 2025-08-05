@@ -1,0 +1,113 @@
+name: flutter_base_template
+
+packages:
+  - packages/**
+  - apps/**
+
+command:
+  version:
+    allowedBranches: ["main", "master"]
+    workspaceChangelog: true
+    linkToCommits: true
+    
+  bootstrap:
+    environment:
+      sdk: ">=3.0.0 <4.0.0"
+      flutter: ">=3.10.0"
+    dependencies:
+      flutter:
+        sdk: flutter
+    dev_dependencies:
+      flutter_test:
+        sdk: flutter
+      flutter_lints: ^3.0.0
+
+scripts:
+  # Analysis and formatting
+  analyze:
+    run: flutter analyze
+    description: Run analysis for all packages
+    
+  format:
+    run: dart format . --fix
+    description: Format all Dart files
+    
+  format:check:
+    run: dart format . --set-exit-if-changed
+    description: Check if all Dart files are formatted
+    
+  # Testing
+  test:
+    run: flutter test
+    description: Run tests for all packages
+    packageFilters:
+      dirExists: test
+      
+  test:coverage:
+    run: flutter test --coverage
+    description: Run tests with coverage for all packages
+    packageFilters:
+      dirExists: test
+      
+  # Code generation
+  build:runner:
+    run: flutter packages pub run build_runner build --delete-conflicting-outputs
+    description: Run code generation for all packages
+    packageFilters:
+      dependsOn: "build_runner"
+      
+  build:runner:watch:
+    run: flutter packages pub run build_runner watch --delete-conflicting-outputs
+    description: Watch for changes and run code generation
+    packageFilters:
+      dependsOn: "build_runner"
+      
+  # App specific commands
+  build:android:
+    run: flutter build apk --release
+    description: Build Android APK for all apps
+    packageFilters:
+      dirExists: android
+      
+  build:ios:
+    run: flutter build ipa --release
+    description: Build iOS IPA for all apps
+    packageFilters:
+      dirExists: ios
+      
+  build:web:
+    run: flutter build web --release
+    description: Build web for all apps
+    packageFilters:
+      dirExists: web
+      
+  build:windows:
+    run: flutter build windows --release
+    description: Build Windows for all apps
+    packageFilters:
+      dirExists: windows
+      
+  build:macos:
+    run: flutter build macos --release
+    description: Build macOS for all apps
+    packageFilters:
+      dirExists: macos
+      
+  build:linux:
+    run: flutter build linux --release
+    description: Build Linux for all apps
+    packageFilters:
+      dirExists: linux
+
+  # Utility commands
+  clean:
+    run: flutter clean
+    description: Clean all packages
+    
+  pub:get:
+    run: flutter pub get
+    description: Get dependencies for all packages
+    
+  pub:upgrade:
+    run: flutter pub upgrade
+    description: Upgrade dependencies for all packages

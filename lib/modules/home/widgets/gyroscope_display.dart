@@ -33,7 +33,7 @@ class _GyroscopeDisplayState extends State<GyroscopeDisplay> {
   void _startListening() {
     _gyroscopeSubscription = gyroscopeEvents.listen((GyroscopeEvent event) {
       setState(() {
-        _gyroscopeValues = <double>[event.x!, event.y!, event.z!];
+        _gyroscopeValues = <double>[event.x, event.y, event.z];
       });
       // Bạn có thể thêm logic xử lý dữ liệu gyroscope ở đây nếu cần
       // print('Gyroscope: x=${event.x?.toStringAsFixed(2)}, y=${event.y?.toStringAsFixed(2)}, z=${event.z?.toStringAsFixed(2)}');
@@ -41,7 +41,7 @@ class _GyroscopeDisplayState extends State<GyroscopeDisplay> {
 
     _accelerometerSubscription = accelerometerEvents.listen((AccelerometerEvent event) {
       setState(() {
-        _accelerometerValues = <double>[event.x!, event.y!, event.z!];
+        _accelerometerValues = <double>[event.x, event.y, event.z];
         _updateOrientation();
       });
     });

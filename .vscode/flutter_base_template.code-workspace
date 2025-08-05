@@ -1,0 +1,195 @@
+{
+  "folders": [
+    {
+      "name": "🏠 Root",
+      "path": "."
+    },
+    {
+      "name": "📦 Core Shared",
+      "path": "./packages/core_shared"
+    },
+    {
+      "name": "🎨 Design System",
+      "path": "./packages/design_system"
+    },
+    {
+      "name": "📱 Finance Manager",
+      "path": "./apps/finance_manager"
+    }
+  ],
+  "settings": {
+    // Flutter & Dart Settings
+    "dart.flutterSdkPath": null,
+    "dart.previewLsp": true,
+    "dart.lineLength": 100,
+    
+    // Multi-root workspace
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/build": true,
+      "**/.dart_tool": true,
+      "**/generated_plugin_registrant.dart": true
+    },
+    
+    // File associations
+    "files.associations": {
+      "melos.yaml": "yaml",
+      "*.arb": "json"
+    },
+    
+    // Editor
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    },
+    
+    // Terminal
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    
+    // Extension settings
+    "flutter.workspaceFolder": "${workspaceFolder}",
+    
+    // Melos integration
+    "terminal.integrated.env.osx": {
+      "PATH": "${workspaceFolder}/node_modules/.bin:${env:PATH}"
+    }
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Melos Bootstrap",
+        "type": "shell",
+        "command": "melos bootstrap",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Melos Clean",
+        "type": "shell",
+        "command": "melos clean",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Melos Test All",
+        "type": "shell",
+        "command": "melos test",
+        "group": "test",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Melos Format All",
+        "type": "shell",
+        "command": "melos format",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Create New App",
+        "type": "shell",
+        "command": "./tools/create_app.sh",
+        "group": "build",
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": true,
+          "panel": "shared"
+        },
+        "problemMatcher": []
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "🏠 Finance Manager (Debug)",
+        "type": "dart",
+        "request": "launch",
+        "program": "lib/main.dart",
+        "cwd": "${workspaceFolder}"
+      },
+      {
+        "name": "🏠 Finance Manager (Profile)",
+        "type": "dart",
+        "request": "launch",
+        "program": "lib/main.dart",
+        "cwd": "${workspaceFolder}",
+        "args": ["--profile"]
+      },
+      {
+        "name": "🏠 Finance Manager (Release)",
+        "type": "dart",
+        "request": "launch",
+        "program": "lib/main.dart",
+        "cwd": "${workspaceFolder}",
+        "args": ["--release"]
+      },
+      {
+        "name": "🌐 Finance Manager (Web)",
+        "type": "dart",
+        "request": "launch",
+        "program": "lib/main.dart",
+        "cwd": "${workspaceFolder}",
+        "args": ["-d", "chrome"]
+      },
+      {
+        "name": "📱 Finance Manager (iOS Simulator)",
+        "type": "dart",
+        "request": "launch",
+        "program": "lib/main.dart",
+        "cwd": "${workspaceFolder}",
+        "args": ["-d", "ios"]
+      },
+      {
+        "name": "🤖 Finance Manager (Android Emulator)",
+        "type": "dart",
+        "request": "launch",
+        "program": "lib/main.dart",
+        "cwd": "${workspaceFolder}",
+        "args": ["-d", "android"]
+      }
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "dart-code.flutter",
+      "dart-code.dart-code",
+      "nash.awesome-flutter-snippets",
+      "usernamehw.errorlens",
+      "eamodio.gitlens",
+      "wayou.vscode-todo-highlight",
+      "localizely.flutter-intl",
+      "hirantha.json-to-dart",
+      "pkief.material-icon-theme",
+      "ms-vscode.vscode-json",
+      "redhat.vscode-yaml"
+    ]
+  }
+}
